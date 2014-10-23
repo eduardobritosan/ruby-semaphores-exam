@@ -13,4 +13,9 @@ describe Examen do
 			@ex.respuestas.should eq([1,2,3,4])
 		end
 	end
+	describe "Pruebas de metodos get" do
+		it "Metodo para obter la pregunta" do
+			@ex.get
+		end
+	end
 end
