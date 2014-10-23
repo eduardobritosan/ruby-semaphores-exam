@@ -10,6 +10,12 @@ class Examen
 		@question
 	end
 	def getanswers
-		@question
+		@respuestas
+	end
+	def printex
+		puts "#{@question}\n"
+		respuestas.each do |resp|
+			puts resp
+		end
 	end
 end
