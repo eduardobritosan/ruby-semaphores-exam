@@ -9,4 +9,7 @@ class Examen
 	def getquestion
 		@question
 	end
+	def getanswers
+		@question
+	end
 end
