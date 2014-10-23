@@ -1,5 +1,8 @@
 require "exam/version"
 
-module Exam
-  # Your code goes here...
+class Examen
+	attr_reader :question
+	def initialize(question)
+		@question = question
+	end
 end

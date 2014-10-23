@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.version       = Exam::VERSION
   spec.authors       = ["Eduardo Brito Sanchez"]
   spec.email         = ["eduardo_brito27@hotmail.com"]
-  spec.description   = %q{TODO: Write a gem description}
+  spec.description   = %q{ Write a gem description}
   spec.summary       = %q{TODO: Write a gem summary}
   spec.homepage      = ""
   spec.license       = "MIT"
@@ -20,4 +20,5 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 1.3"
   spec.add_development_dependency "rake"
+  spec.add_development_dependency "rspec", "~> 2.11"
 end
