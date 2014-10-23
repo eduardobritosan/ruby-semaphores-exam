@@ -6,4 +6,7 @@ class Examen
 		@question = question
 		@respuestas = respuestas
 	end
+	def getquestion
+		@question
+	end
 end

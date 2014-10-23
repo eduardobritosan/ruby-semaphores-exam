@@ -15,7 +15,10 @@ describe Examen do
 	end
 	describe "Pruebas de metodos get" do
 		it "Metodo para obter la pregunta" do
-			@ex.get
+			@ex.getquestion
+		end
+		it "Metodo para obtener las respuestas" do
+			@ex.getanswers
 		end
 	end
 end
