@@ -58,6 +58,12 @@ describe "Preguntas simples practica 6" do
 								['a) #<Xyz:0xa000208>\n','b) nil\n','c) 0\n','d) Ninguna de las anteriores'])
 		@pregunta2 = Examen.new("hash_raro = {\n\t[1, 2, 3] => Object.new(),\n\tHash.new => :toto\n}",
 								['a) Cierto','b) Falso'])
+		@pregunta3 = Examen.new('\tclass Array\n\t\tdef say_hi\n\t\t\t"HEY!"\n\t\tend\n\tend\n\t\np [1, "bob".say_hi]\n',
+								['a) 1','b) bob','c) HEY','d) Ninguna de las anteriores'])
+		@pregunta4 = Examen.new('\tclass Objeto\n\tend\n',
+								['a) Una instancia de la clase Class','b) Una constante','c) Un objeto','d) Ninguna de las anteriores'])						
+		@pregunta5 = Examen.new('Es apropiado que una clase Tablero herede de una clase Juego',
+								['a) Cierto','b) Falso'])
 	end
 	it "Pregunta 1" do
 		@pregunta1.question.should eq("\tclass Xyz\n\t\tdef pots\n\t\t\t@nice\n\t\tend\n\tend\n\txyz = Xyz.new\n\tp xyz.pots\n")
@@ -66,5 +72,17 @@ describe "Preguntas simples practica 6" do
 	it "Pregunta 2" do
 		@pregunta2.question.should eq("hash_raro = {\n\t[1, 2, 3] => Object.new(),\n\tHash.new => :toto\n}")
 		@pregunta2.respuestas.should eq(['a) Cierto','b) Falso'])
+	end
+	it "Pregunta 3" do
+		@pregunta3.question.should eq('\tclass Array\n\t\tdef say_hi\n\t\t\t"HEY!"\n\t\tend\n\tend\n\t\np [1, "bob".say_hi]\n')
+		@pregunta3.respuestas.should eq(['a) 1','b) bob','c) HEY','d) Ninguna de las anteriores'])
+	end
+	it "Pregunta 4" do
+		@pregunta4.question.should eq('\tclass Objeto\n\tend\n')
+		@pregunta4.respuestas.should eq(['a) Una instancia de la clase Class','b) Una constante','c) Un objeto','d) Ninguna de las anteriores'])
+	end
+	it "Pregunta 5" do
+		@pregunta5.question.should eq('Es apropiado que una clase Tablero herede de una clase Juego')
+		@pregunta5.respuestas.should eq(['a) Cierto','b) Falso'])
 	end
 end
