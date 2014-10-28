@@ -3,11 +3,11 @@ require 'exam'
 
 describe Examen do
 	before :each do
-		@ex= Examen.new("Que hora es?",['11:30','2:20','3:55','4:58'])
+		@ex= Examen.new("\nQue hora es?",['11:30','2:20','3:55','4:58'])
 	end
 	describe "Pruebas de inicializacion" do
 		it "Se crea la pregunta?" do
-			@ex.question.should eq("Que hora es?")
+			@ex.question.should eq("\nQue hora es?")
 		end
 		it "Se crean las respuestas?" do
 			@ex.respuestas.should eq(['11:30','2:20','3:55','4:58'])
@@ -26,4 +26,9 @@ describe Examen do
 			@ex.printex
 		end
 	end
+	describe "Pruebas de listas\n" do
+		it "No existe un nodo" do
+			@node.is_a?(Nodo)
+		end
+	end	
 end
