@@ -38,5 +38,12 @@ describe Examen do
 		it "Se inserta un elemento" do
 			@list.push(@node)
 		end
+		it "Se pueden insertar varios elementos" do
+			newArray = [Nodo.new(1,3),Nodo.new(3,7)]
+			@list.multipush(newArray)
+		end
+		it "Debe existir una lista con su cabeza" do
+			@list.head.is_a?(Nodo)
+		end
 	end	
 end
