@@ -19,3 +19,8 @@ class Examen
 		end
 	end
 end
+
+Nodo = Struct.new(:value,:next) do
+	attr_reader :value,:next
+	attr_writer :value,:next
+end

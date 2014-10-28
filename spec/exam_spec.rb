@@ -4,6 +4,7 @@ require 'exam'
 describe Examen do
 	before :each do
 		@ex= Examen.new("\nQue hora es?",['11:30','2:20','3:55','4:58'])
+		@node = Nodo.new(1,2)
 	end
 	describe "Pruebas de inicializacion" do
 		it "Se crea la pregunta?" do
