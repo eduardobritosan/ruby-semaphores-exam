@@ -2,7 +2,7 @@ require 'spec_helper'
 require 'exam'
 
 describe Examen do
-	before :each do
+	before :all do
 		@ex= Examen.new("\nQue hora es?",['11:30','2:20','3:55','4:58'])
 	end
 	describe "Pruebas de inicializacion" do
@@ -30,7 +30,6 @@ describe Examen do
 	describe "Pruebas de preguntas de practica 6" do
 	end
 end
-
 describe List do
 	before :each do
 		@node = Nodo.new(1,2)
@@ -53,3 +52,19 @@ describe List do
 		@list.head.is_a?(Nodo)
 	end
 end	
+describe "Preguntas simples practica 6" do
+	before :all do
+		@pregunta1 = Examen.new("\tclass Xyz\n\t\tdef pots\n\t\t\t@nice\n\t\tend\n\tend\n\txyz = Xyz.new\n\tp xyz.pots\n",
+								['a) #<Xyz:0xa000208>\n','b) nil\n','c) 0\n','d) Ninguna de las anteriores'])
+		@pregunta2 = Examen.new("hash_raro = {\n\t[1, 2, 3] => Object.new(),\n\tHash.new => :toto\n}",
+								['a) Cierto','b) Falso'])
+	end
+	it "Pregunta 1" do
+		@pregunta1.question.should eq("\tclass Xyz\n\t\tdef pots\n\t\t\t@nice\n\t\tend\n\tend\n\txyz = Xyz.new\n\tp xyz.pots\n")
+		@pregunta1.respuestas.should eq(['a) #<Xyz:0xa000208>\n','b) nil\n','c) 0\n','d) Ninguna de las anteriores'])
+	end
+	it "Pregunta 2" do
+		@pregunta2.question.should eq("hash_raro = {\n\t[1, 2, 3] => Object.new(),\n\tHash.new => :toto\n}")
+		@pregunta2.respuestas.should eq(['a) Cierto','b) Falso'])
+	end
+end
