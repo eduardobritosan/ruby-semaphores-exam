@@ -24,3 +24,13 @@ Nodo = Struct.new(:value,:next) do
 	attr_reader :value,:next
 	attr_writer :value,:next
 end
+
+class List
+	attr_reader :arr
+	def initialize
+		@arr = Array.new(1)
+	end
+	def shift
+		@arr.shift		
+	end
+end
