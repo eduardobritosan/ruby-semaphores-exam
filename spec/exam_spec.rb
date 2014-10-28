@@ -35,5 +35,8 @@ describe Examen do
 		it "Se extrae el primer elemento" do
 			@list.shift
 		end
+		it "Se inserta un elemento" do
+			@list.push(@node)
+		end
 	end	
 end

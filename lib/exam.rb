@@ -33,4 +33,7 @@ class List
 	def shift
 		@arr.shift		
 	end
+	def push(newNodo)
+		@arr.push(newNodo)
+	end
 end
