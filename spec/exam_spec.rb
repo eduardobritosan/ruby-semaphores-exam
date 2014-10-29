@@ -42,14 +42,7 @@ describe List do
 		@list.shift
 	end
 	it "Se inserta un elemento" do
-		@list.push(@node)
-	end
-	it "Se pueden insertar varios elementos" do
-		newArray = [Nodo.new(1,3),Nodo.new(3,7)]
-		@list.multipush(newArray)
-	end
-	it "Debe existir una lista con su cabeza" do
-		@list.head.is_a?(Nodo)
+		@list.push(4)
 	end
 end	
 describe "Preguntas simples practica 6" do
@@ -65,35 +58,35 @@ describe "Preguntas simples practica 6" do
 		@pregunta5 = Examen.new('Es apropiado que una clase Tablero herede de una clase Juego',
 								['a) Cierto','b) Falso'])
 		@preguntas = List.new
-		List.push(@pregunta1)
-		List.push(@pregunta2)
-		List.push(@pregunta3)
-		List.push(@pregunta4)
-		List.push(@pregunta5)
+		@preguntas.push(@pregunta1)
+		@preguntas.push(@pregunta2)
+		@preguntas.push(@pregunta3)
+		@preguntas.push(@pregunta4)
+		@preguntas.push(@pregunta5)
 	end
 	it "Pregunta 1" do
-		@preguntas.head.getquestion.should eq('Es apropiado que una clase Tablero herede de una clase Juego')
-		@preguntas.head.getrespuestas.should eq(['a) Cierto','b) Falso'])
+		@preguntas.head.value.getquestion.should eq("Es apropiado que una clase Tablero herede de una clase Juego")
+		@preguntas.head.value.getanswers.should eq(['a) Cierto','b) Falso'])
 		@preguntas.shift
 	end
 	it "Pregunta 2" do
-		@preguntas.head.getquestion.should eq('\tclass Objeto\n\tend\n')
-		@preguntas.head.getrespuestas.should eq(['a) Una instancia de la clase Class','b) Una constante','c) Un objeto','d) Ninguna de las anteriores'])
+		@preguntas.head.value.getquestion.should eq("\tclass Objeto\n\tend\n")
+		@preguntas.head.value.getanswers.should eq(['a) Una instancia de la clase Class','b) Una constante','c) Un objeto','d) Ninguna de las anteriores'])
 		@preguntas.shift
 	end
 	it "Pregunta 3" do
-		@preguntas.head.getquestion.should eq('\tclass Array\n\t\tdef say_hi\n\t\t\t"HEY!"\n\t\tend\n\tend\n\t\np [1, "bob".say_hi]\n')
-		@preguntas.head.getrespuestas.should eq(['a) 1','b) bob','c) HEY','d) Ninguna de las anteriores'])
+		@preguntas.head.value.getquestion.should eq("\tclass Array\n\t\tdef say_hi\n\t\t\t'HEY!'\n\t\tend\n\tend\n\t\np [1, 'bob'.say_hi]\n")
+		@preguntas.head.value.getanswers.should eq(['a) 1','b) bob','c) HEY','d) Ninguna de las anteriores'])
 		@preguntas.shift
 	end
 	it "Pregunta 4" do
-		@preguntas.head.getquestion.should eq("hash_raro = {\n\t[1, 2, 3] => Object.new(),\n\tHash.new => :toto\n}")
-		@preguntas.head.getrespuestas.should eq(['a) Cierto','b) Falso'])
+		@preguntas.head.value.getquestion.should eq("hash_raro = {\n\t[1, 2, 3] => Object.new(),\n\tHash.new => :toto\n}")
+		@preguntas.head.value.getanswers.should eq(['a) Cierto','b) Falso'])
 		@preguntas.shift
 	end
 	it "Pregunta 5" do
-		@preguntas.head.getquestion.should eq("\tclass Xyz\n\t\tdef pots\n\t\t\t@nice\n\t\tend\n\tend\n\txyz = Xyz.new\n\tp xyz.pots\n")
-		@preguntas.head.getrespuestas.should eq(['a) #<Xyz:0xa000208>\n','b) nil\n','c) 0\n','d) Ninguna de las anteriores'])
+		@preguntas.head.value.getquestion.should eq("\tclass Xyz\n\t\tdef pots\n\t\t\t@nice\n\t\tend\n\tend\n\txyz = Xyz.new\n\tp xyz.pots\n")
+		@preguntas.head.value.getanswers.should eq(['a) #<Xyz:0xa000208>\n','b) nil\n','c) 0\n','d) Ninguna de las anteriores'])
 		@preguntas.shift
 	end
 	
