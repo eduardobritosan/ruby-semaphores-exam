@@ -1,28 +1,23 @@
 require "exam/version"
 
-Nodo = Struct.new(:value,:next) do
-	attr_reader :value,:next
-	attr_writer :value,:next
-end
-
+Nodo = Struct.new(:value,:next)
 class List
-	attr_reader :arr
+	attr_accessor :head
 	def initialize
-		@arr = Array.new(1,Nodo.new(nil,nil))
+		@head = nil
 	end
 	def shift
-		@arr.shift		
+		aux = @head
+		@head = @head.next
+		aux.value
 	end
 	def push(newValue)
-		@arr.last.next = newValue
-		@arr.push(newNodo = Nodo.new(newValue,nil))
-	end
-	def multipush(nodeArray)
-		@arr.last.next = nodeArray.first.value
-		@arr.push(nodeArray)
-	end
-	def head
-		@arr.first
+	    if @head == nil
+	      head = Nodo.new(newValue,nil)
+	    elsif
+	      aux = Nodo.new(newValue,@head)
+	      @head = aux
+	    end
 	end
 end
 
