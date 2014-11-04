@@ -1,4 +1,4 @@
 require "exam/version"
-require "classexam.rb"
-require "classlist.rb"
+require "listafinal.rb"
+require "clasefinal.rb"
 
