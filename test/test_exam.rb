@@ -1,4 +1,4 @@
-require "../lib/exam.rb"
+require "./lib/exam"
 require 'test/unit'
 
 
