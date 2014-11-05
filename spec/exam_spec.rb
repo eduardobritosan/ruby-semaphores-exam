@@ -47,46 +47,21 @@ describe List do
 end	
 describe "Preguntas simples practica 6" do
 	before :all do
-		@pregunta1 = Examen.new("\tclass Xyz\n\t\tdef pots\n\t\t\t@nice\n\t\tend\n\tend\n\txyz = Xyz.new\n\tp xyz.pots\n",
-								['a) #<Xyz:0xa000208>\n','b) nil\n','c) 0\n','d) Ninguna de las anteriores'])
-		@pregunta2 = Examen.new("hash_raro = {\n\t[1, 2, 3] => Object.new(),\n\tHash.new => :toto\n}",
-								['a) Cierto','b) Falso'])
-		@pregunta3 = Examen.new('\tclass Array\n\t\tdef say_hi\n\t\t\t"HEY!"\n\t\tend\n\tend\n\t\np [1, "bob".say_hi]\n',
-								['a) 1','b) bob','c) HEY','d) Ninguna de las anteriores'])
-		@pregunta4 = Examen.new('\tclass Objeto\n\tend\n',
-								['a) Una instancia de la clase Class','b) Una constante','c) Un objeto','d) Ninguna de las anteriores'])						
-		@pregunta5 = Examen.new('Es apropiado que una clase Tablero herede de una clase Juego',
-								['a) Cierto','b) Falso'])
-		@preguntas = List.new
+		@pregunta1 = Examen.new("¿Cual es el tipo del objeto en el siguiente codigo Ruby?\nclass Objeto\n end",
+								['a) Una instancia de la clase Class\n','b) Una constante\n','c) Un objeto\n','d) Ninguna de las anteriores'])					
+		@pregunta2 = VerFal.new('Es apropiado que una clase Tablero herede de una clase Juego')
+		@preguntas = DoubleList.new
 		@preguntas.push(@pregunta1)
 		@preguntas.push(@pregunta2)
-		@preguntas.push(@pregunta3)
-		@preguntas.push(@pregunta4)
-		@preguntas.push(@pregunta5)
 	end
 	it "Pregunta 1" do
-		@preguntas.head.value.getquestion.should eq("Es apropiado que una clase Tablero herede de una clase Juego")
-		@preguntas.head.value.getanswers.should eq(['a) Cierto','b) Falso'])
+		@preguntas.head.value.getquestion.should eq("¿Cual es el tipo del objeto en el siguiente codigo Ruby?\nclass Objeto\n end")
+		@preguntas.head.value.getanswers.should eq(['a) Una instancia de la clase Class\n','b) Una constante\n','c) Un objeto\n','d) Ninguna de las anteriores'])
 		@preguntas.shift
 	end
 	it "Pregunta 2" do
-		@preguntas.head.value.getquestion.should eq("\tclass Objeto\n\tend\n")
-		@preguntas.head.value.getanswers.should eq(['a) Una instancia de la clase Class','b) Una constante','c) Un objeto','d) Ninguna de las anteriores'])
-		@preguntas.shift
-	end
-	it "Pregunta 3" do
-		@preguntas.head.value.getquestion.should eq("\tclass Array\n\t\tdef say_hi\n\t\t\t'HEY!'\n\t\tend\n\tend\n\t\np [1, 'bob'.say_hi]\n")
-		@preguntas.head.value.getanswers.should eq(['a) 1','b) bob','c) HEY','d) Ninguna de las anteriores'])
-		@preguntas.shift
-	end
-	it "Pregunta 4" do
-		@preguntas.head.value.getquestion.should eq("hash_raro = {\n\t[1, 2, 3] => Object.new(),\n\tHash.new => :toto\n}")
+		@preguntas.head.value.getquestion.should eq("Es apropiado que una clase Tablero herede de una clase Juego")
 		@preguntas.head.value.getanswers.should eq(['a) Cierto','b) Falso'])
-		@preguntas.shift
-	end
-	it "Pregunta 5" do
-		@preguntas.head.value.getquestion.should eq("\tclass Xyz\n\t\tdef pots\n\t\t\t@nice\n\t\tend\n\tend\n\txyz = Xyz.new\n\tp xyz.pots\n")
-		@preguntas.head.value.getanswers.should eq(['a) #<Xyz:0xa000208>\n','b) nil\n','c) 0\n','d) Ninguna de las anteriores'])
 		@preguntas.shift
 	end
 	
