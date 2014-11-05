@@ -1,4 +1,4 @@
-require "../lib/exam"
+require "../lib/exam.rb"
 require 'test/unit'
 
 
@@ -13,13 +13,13 @@ class DoubleList < Test::Unit::TestCase
     # nothing
   end
   def test_simple
-    assert_equal("0", @vacia.value)
+    assert_equal("1", @vacia.value)
     
   end
   def test_type_check
-    assert_raise(RuntimeError) {Complejo.new('1','1')}
+    assert_raise(RuntimeError) {DoubleList.new(1)}
   end
   def test_failure
-    assert_equal("(5,5)",(@origen*5).to_s,"Producto escalar")
+    assert_equal("(5,5)",(@vacia*5).to_s,"Producto escalar")
   end
 end
