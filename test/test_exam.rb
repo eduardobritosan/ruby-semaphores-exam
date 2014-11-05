@@ -13,8 +13,9 @@ class DoubleList < Test::Unit::TestCase
     # nothing
   end
   def test_simple
-    assert_equal("0", @vacia.value)
-    
+    assert_equal("1", @vacia.pop)
+    assert_equal("2", @vacia.pop)
+    assert_equal("3", @vacia.pop) 
   end
   def test_type_check
     assert_raise(RuntimeError) {Complejo.new('1','1')}

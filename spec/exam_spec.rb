@@ -33,16 +33,16 @@ end
 describe List do
 	before :each do
 		@node = Nodo.new(1,2)
-		@list = List.new
+		@list = DoubleList.new
 	end
 	it "No existe un nodo" do
 		@node.is_a?(Nodo)
 	end
-	it "Se extrae el primer elemento" do
-		@list.shift
-	end
 	it "Se inserta un elemento" do
 		@list.push(4)
+	end
+	it "Se extrae el primer elemento" do
+		@list.pop
 	end
 end	
 describe "Preguntas simples practica 6" do
@@ -57,12 +57,12 @@ describe "Preguntas simples practica 6" do
 	it "Pregunta 1" do
 		@preguntas.head.value.getquestion.should eq("¿Cual es el tipo del objeto en el siguiente codigo Ruby?\nclass Objeto\n end")
 		@preguntas.head.value.getanswers.should eq(['a) Una instancia de la clase Class\n','b) Una constante\n','c) Un objeto\n','d) Ninguna de las anteriores'])
-		@preguntas.shift
+		@preguntas.pop
 	end
 	it "Pregunta 2" do
 		@preguntas.head.value.getquestion.should eq("Es apropiado que una clase Tablero herede de una clase Juego")
 		@preguntas.head.value.getanswers.should eq(['a) Cierto','b) Falso'])
-		@preguntas.shift
+		
 	end
 	
 	
