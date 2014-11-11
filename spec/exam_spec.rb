@@ -79,12 +79,24 @@ describe "Instancia VerFal" do
 		@testexamen.class.is_a?(VerFal)
 	end
 end
-describe "Pruebas Preguntas Practica 8" do
+describe "Pruebas Preguntas Comparable Practica 8" do
 	before :all do
 		@t1 = VerFal.new("Hola")
 		@t2 = VerFal.new("Que tal")
 	end
-	it "Existe el comparador?" do
-		@t1 < @t2
+	it "Existe el comparador? <" do
+		(@t1 < @t2).should be true
+	end
+	it "Existe el comparador? >" do
+		(@t1 > @t2).should be false
+	end
+	it "Existe el comparador? ==" do
+		(@t1 == @t2).should be false
+	end
+	it "Existe el comparador? <=" do
+		(@t1 <= @t2).should be true
+	end
+	it "Existe el comparador? >=" do
+		(@t1 >= @t2).should be false
 	end
 end
