@@ -3,6 +3,7 @@ require "exam/version"
 
 Nodo = Struct.new(:value,:next)
 class List
+	include Enumerable
 	attr_accessor :tail
 	def initialize
 		@tail = Nodo.new(nil,nil)
@@ -19,6 +20,13 @@ class List
 	      aux = Nodo.new(newValue,@tail)
 	      @tail = aux
 	    end
+	end
+	def each
+		aux = @tail
+		while aux != nil 
+			yield aux.value
+			aux = aux.next
+		end
 	end
 end
 

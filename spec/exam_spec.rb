@@ -7,24 +7,16 @@ describe Examen do
 		@ex= Examen.new("\nQue hora es?",['11:30','2:20','3:55','4:58'])
 	end
 	describe "Pruebas de inicializacion" do
-		it "Se crea la pregunta?" do
-			@ex.question.should eq("\nQue hora es?")
+		it "Se crea la pregunta? y funcionan los gets" do
+			@ex.getquestion.should eq("\nQue hora es?")
 		end
-		it "Se crean las respuestas?" do
-			@ex.respuestas.should eq(['11:30','2:20','3:55','4:58'])
-		end
-	end
-	describe "Pruebas de metodos get" do
-		it "Metodo para obter la pregunta" do
-			@ex.getquestion
-		end
-		it "Metodo para obtener las respuestas" do
-			@ex.getanswers
+		it "Se crean las respuestas? y funcionan los get" do
+			@ex.getanswers.should eq(['11:30','2:20','3:55','4:58'])
 		end
 	end
 	describe "Print final" do
 		it "La pregunta es:" do
-			@ex.printex
+			@ex.printex.should eq (["11:30","2:20","3:55","4:58"])
 		end
 	end
 
@@ -103,12 +95,12 @@ end
 
 describe "Pruebas Enumerable lista Practica 8" do
 	before :all do
-		@lista = DoubleList.new
-		@lista.push(1)
-		@lista.push(2)
+		@lista = List.new
 		@lista.push(3)
+		@lista.push(2)
+		@lista.push(1)
 	end
 	it "Prueba de existencia each" do
-		(@lista.all {|node| node.value <= 4}).should be true
+		@lista.max.should eq(3)
 	end
 end

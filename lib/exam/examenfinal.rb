@@ -21,7 +21,8 @@ class Examen
 		end
 	end
 	def <=>(other)
-	  (self.question <=> other.question) == 0 ? self.respuestas <=> other.respuestas : self.question <=> other.question
+		return nil unless other.is_a? Examen
+		(self.question <=> other.question) == 0 ? self.respuestas <=> other.respuestas : self.question <=> other.question
 	end
 end
 
