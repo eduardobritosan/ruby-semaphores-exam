@@ -3,6 +3,7 @@ require "exam/version"
 
 class Examen
 	attr_reader :question, :respuestas
+	include Comparable
 	def initialize(question,respuestas)
 		@question = question
 		@respuestas = respuestas
@@ -18,6 +19,9 @@ class Examen
 		respuestas.each do |resp|
 			puts resp
 		end
+	end
+	def <=>(other)
+	  (self.question <=> other.question) == 0 ? self.respuestas <=> other.respuestas : self.question <=> other.question
 	end
 end
 

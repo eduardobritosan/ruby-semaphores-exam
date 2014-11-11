@@ -81,10 +81,10 @@ describe "Instancia VerFal" do
 end
 describe "Pruebas Preguntas Practica 8" do
 	before :all do
-		@t1 = VerFal.new("")
-		@t2 = VerFal.new("")
+		@t1 = VerFal.new("Hola")
+		@t2 = VerFal.new("Que tal")
 	end
 	it "Existe el comparador?" do
-		@pregunta1 < @pregunta2
+		@t1 < @t2
 	end
 end
