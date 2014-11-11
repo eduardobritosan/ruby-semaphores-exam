@@ -56,12 +56,11 @@ describe "Preguntas simples practica 6" do
 		@preguntas.push(@pregunta1)
 		@preguntas.push(@pregunta2)
 	end
-	it "Pregunta 1" do
-		@preguntas.pop.getquestion.should eq("Es apropiado que una clase Tablero herede de una clase Juego")
+	it "Comprobacion pop Examen" do
+		@preguntas.pop.is_a?(Examen)
 	end
-	it "Pregunta 2" do
-		@preguntas.tail.value.getquestion.should eq("¿Cual es el tipo del objeto en el siguiente codigo Ruby?\nclass Objeto\n end")
-		@preguntas.tail.value.getanswers.should eq(["a) Una instancia de la clase Class\n","b) Una constante\n","c) Un objeto\n","d) Ninguna de las anteriores"])
+	it "Comprobacion pop VerFal" do
+		@preguntas.pop.is_a?(VerFal)
 	end
 end
 describe "Instancia Examen" do
@@ -78,5 +77,14 @@ describe "Instancia VerFal" do
 	end
 	it "Existe una instancia de preguntas verdadero falso?" do
 		@testexamen.class.is_a?(VerFal)
+	end
+end
+describe "Pruebas Preguntas Practica 8" do
+	before :all do
+		@t1 = VerFal.new("")
+		@t2 = VerFal.new("")
+	end
+	it "Existe el comparador?" do
+		@pregunta1 < @pregunta2
 	end
 end
