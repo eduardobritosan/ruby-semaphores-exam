@@ -100,3 +100,15 @@ describe "Pruebas Preguntas Comparable Practica 8" do
 		(@t1 >= @t2).should be false
 	end
 end
+
+describe "Pruebas Enumerable lista Practica 8" do
+	before :all do
+		@lista = DoubleList.new
+		@lista.push(1)
+		@lista.push(2)
+		@lista.push(3)
+	end
+	it "Prueba de existencia each" do
+		(@lista.all {|node| node.value <= 4}).should be true
+	end
+end
