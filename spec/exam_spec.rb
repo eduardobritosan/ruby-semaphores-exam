@@ -96,11 +96,10 @@ end
 describe "Pruebas Enumerable lista Practica 8" do
 	before :all do
 		@lista = List.new
-		@lista.push(3)
-		@lista.push(2)
-		@lista.push(1)
+		@lista.push(@t1)
+		@lista.push(@t2)
 	end
 	it "Prueba de existencia each" do
-		@lista.max.should eq(3)
+		@lista.max.should eq(@t1)
 	end
 end
