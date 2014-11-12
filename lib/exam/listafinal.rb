@@ -2,7 +2,7 @@
 require "exam/version"
 
 Nodo = Struct.new(:value,:next)
-class List
+class List #Clase lista
 	include Enumerable
 	attr_accessor :tail
 	def initialize
