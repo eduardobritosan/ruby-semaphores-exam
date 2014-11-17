@@ -2,6 +2,13 @@
 require 'spec_helper'
 require 'exam'
 
+describe Respuesta do
+	describe "Pruebas de clase respuesta" do
+		it "Constructor" do
+			answerTest.is_a?(Respuesta)
+		end
+	end
+end
 describe Examen do
 	before :all do
 		@ex= Examen.new("\nQue hora es?",['11:30','2:20','3:55','4:58'])

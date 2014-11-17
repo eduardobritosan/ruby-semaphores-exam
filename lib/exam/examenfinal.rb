@@ -1,28 +1,30 @@
 # -*- encoding : utf-8 -*-
 require "exam/version"
 
+
+
 class Examen
-	attr_reader :question, :respuestas
+	attr_reader :question, :answers
 	include Comparable
-	def initialize(question,respuestas)
+	def initialize(question,answers)
 		@question = question
-		@respuestas = respuestas
+		@answers = answers
 	end
 	def getquestion
 		@question
 	end
 	def getanswers
-		@respuestas
+		@answers
 	end
 	def printex
 		puts "#{@question}\n"
-		respuestas.each do |resp|
+		answers.each do |resp|
 			puts resp
 		end
 	end
 	def <=>(other)
 		return nil unless other.is_a? Examen
-		(self.question <=> other.question) == 0 ? self.respuestas <=> other.respuestas : self.question <=> other.question
+		(self.question <=> other.question) == 0 ? self.answers <=> other.answers : self.question <=> other.question
 	end
 end
 
@@ -30,7 +32,7 @@ class VerFal < Examen
 	attr_accessor :question
 	def initialize(question)
 		@question = question
-		@respuestas = ["a) Verdadero\n","b) Falso\n"]
+		@answers = ["a) Verdadero\n","b) Falso\n"]
 	end
 end
 
