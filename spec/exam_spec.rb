@@ -24,14 +24,6 @@ describe Examen do
 			@ex.getanswers.should eq(['11:30','2:20','3:55','4:58'])
 		end
 	end
-	describe "Print final" do
-		it "La pregunta es:" do
-			@ex.printex.should eq (["11:30","2:20","3:55","4:58"])
-		end
-	end
-
-	describe "Pruebas de preguntas de practica 6" do
-	end
 end
 describe List do
 	before :each do
@@ -83,23 +75,23 @@ describe "Instancia VerFal" do
 end
 describe "Pruebas Preguntas Comparable Practica 8" do
 	before :all do
-		@t1 = VerFal.new("Hola",true,false)
-		@t2 = VerFal.new("Que tal",true,false)
+		@t1 = VerFal.new("El sol es azul",false,true)
+		@t2 = VerFal.new("El caballo blanco de santiago es blanco",true,false)
 	end
 	it "Existe el comparador? <" do
-		(@t1 < @t2).should be true
+		(@t1 < @t2).should be false
 	end
 	it "Existe el comparador? >" do
-		(@t1 > @t2).should be false
+		(@t1 > @t2).should be true
 	end
 	it "Existe el comparador? ==" do
 		(@t1 == @t2).should be false
 	end
 	it "Existe el comparador? <=" do
-		(@t1 <= @t2).should be true
+		(@t1 <= @t2).should be false
 	end
 	it "Existe el comparador? >=" do
-		(@t1 >= @t2).should be false
+		(@t1 >= @t2).should be true
 	end
 end
 
@@ -120,9 +112,24 @@ end
 
 describe Interfaz do
 	before :all do
+		@ans2 = Respuesta.new("Blanco",true)
+		@ans3 = Respuesta.new("Negro",false)
+		@ans4 = Respuesta.new("Verde",false)
+		@ans5 = Respuesta.new("Marron",false)
+		@ans6 = Respuesta.new("Naranja",false)
+		@t3 = Examen.new("Color del caballo blanco de Santiago?",[@ans2,@ans3,@ans4,@ans5,@ans6])
+		@t1 = VerFal.new("El sol es azul",false,true)
+		@t2 = VerFal.new("El caballo blanco de santiago es blanco",true,false)
+		@lista = List.new
+		@lista.push(@t1)
+		@lista.push(@t2)
+		@lista.push(@t3)
 		@testInterfaz = Interfaz.new(@lista)
 	end
 	it "Constructor" do
 		@testInterfaz.is_a?(Interfaz)
+	end
+	it "Interfaz de usuario" do
+		@testInterfaz.interface.should be true
 	end
 end
