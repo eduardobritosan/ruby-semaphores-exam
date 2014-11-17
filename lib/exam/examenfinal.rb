@@ -50,5 +50,6 @@ class Interfaz
 	def initialize(listParam)
 		@listExam = listParam
 	end
+
 end
 
