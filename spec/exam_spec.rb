@@ -101,5 +101,9 @@ describe "Pruebas Enumerable lista Practica 8" do
 	end
 	it "Prueba de existencia each" do
 		@lista.max.should eq(@t1)
+#		@lista.min.should eq(@t2)
+#		@lista.collect.should
+#		@lista.find.should
+#		@lista.all.should eq(@t1)
 	end
 end
