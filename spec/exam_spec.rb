@@ -53,7 +53,7 @@ describe "Preguntas simples practica 6" do
 	before :all do
 		@pregunta1 = Examen.new("¿Cual es el tipo del objeto en el siguiente codigo Ruby?\nclass Objeto\n end",
 								["a) Una instancia de la clase Class\n","b) Una constante\n","c) Un objeto\n","d) Ninguna de las anteriores"])					
-		@pregunta2 = VerFal.new("Es apropiado que una clase Tablero herede de una clase Juego")
+		@pregunta2 = VerFal.new("Es apropiado que una clase Tablero herede de una clase Juego",true,false)
 		@preguntas = DoubleList.new
 		@preguntas.push(@pregunta1)
 		@preguntas.push(@pregunta2)
@@ -75,7 +75,7 @@ describe "Instancia Examen" do
 end
 describe "Instancia VerFal" do
 	before :all do
-		@testexamen = VerFal.new("")
+		@testexamen = VerFal.new("",false,true)
 	end
 	it "Existe una instancia de preguntas verdadero falso?" do
 		@testexamen.class.is_a?(VerFal)
@@ -120,7 +120,7 @@ end
 
 describe Interfaz do
 	before :all do
-		@testInterfaz = Interfaz.new
+		@testInterfaz = Interfaz.new(@lista)
 	end
 	it "Constructor" do
 		@testInterfaz.is_a?(Interfaz)

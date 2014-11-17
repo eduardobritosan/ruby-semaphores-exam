@@ -45,4 +45,10 @@ class VerFal < Examen
 	end
 end
 
+class Interfaz 
+	attr_accessor :listExam
+	def initialize(listParam)
+		@listExam = listParam
+	end
+end
 
