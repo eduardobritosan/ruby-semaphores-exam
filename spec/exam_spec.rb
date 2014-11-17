@@ -3,9 +3,12 @@ require 'spec_helper'
 require 'exam'
 
 describe Respuesta do
-	describe "Pruebas de clase respuesta" do
+	before :all do
+		@answerTest = Respuesta.new("Hola",true)
+	end
+	describe "Pruebas: " do
 		it "Constructor" do
-			answerTest.is_a?(Respuesta)
+			@answerTest.is_a?(Respuesta)
 		end
 	end
 end
@@ -80,8 +83,8 @@ describe "Instancia VerFal" do
 end
 describe "Pruebas Preguntas Comparable Practica 8" do
 	before :all do
-		@t1 = VerFal.new("Hola")
-		@t2 = VerFal.new("Que tal")
+		@t1 = VerFal.new("Hola",true,false)
+		@t2 = VerFal.new("Que tal",true,false)
 	end
 	it "Existe el comparador? <" do
 		(@t1 < @t2).should be true
@@ -112,5 +115,14 @@ describe "Pruebas Enumerable lista Practica 8" do
 #		@lista.collect.should
 #		@lista.find.should
 #		@lista.all.should eq(@t1)
+	end
+end
+
+describe Interfaz do
+	before :all do
+		@testInterfaz = Interfaz.new
+	end
+	it "Constructor" do
+		@testInterfaz.is_a?(Interfaz)
 	end
 end

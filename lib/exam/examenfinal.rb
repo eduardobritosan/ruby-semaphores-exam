@@ -1,6 +1,13 @@
 # -*- encoding : utf-8 -*-
 require "exam/version"
 
+class Respuesta
+	attr_accessor :string, :fidelity
+	def initialize(string,fidelity)
+		@string = string
+		@fidelity = fidelity
+	end
+end
 
 
 class Examen
@@ -29,10 +36,12 @@ class Examen
 end
 
 class VerFal < Examen
-	attr_accessor :question
-	def initialize(question)
+	attr_accessor :question, :answers
+	def initialize(question,fidelityTrue,fidelityFalse)
 		@question = question
-		@answers = ["a) Verdadero\n","b) Falso\n"]
+		@a1 = Respuesta.new("Verdadero",fidelityTrue)
+		@a2 = Respuesta.new("Falso",fidelityFalse)
+		@answers = [@a1,@a2]
 	end
 end
 
