@@ -41,25 +41,30 @@ class VerFal < Examen
 	end
 end
 class Interfaz 
-	attr_accessor :listExam
+	attr_accessor :listExam,:opcion,:aprobado,:falsas,:correctas
 	def initialize(listParam)
 		@listExam = listParam
-	end
-	def interface
 		@opcion = -1
-		@correctas = 0
+		@aprobado = false
 		@falsas = 0
+		@correctas = 0
+	end
+	def interface()
 		@listExam.each do |examenes|
 			examenes.printex
-			while (@opcion < 0 || @opcion >= examenes.answers.length) 
-				@opcion = gets.chomp.to_i
-			end
-			if examenes.answers[@opcion].fidelity == true
-				puts "Respuesta correcta\n"
-				@correctas+=1;
+			#while (@opcion < 0 && @opcion >= examenes.answers.length) 
+					#@opcion = gets.chomp.to_i
+			if @opcion <= 0 && @opcion > examenes.answers.length
+					if examenes.answers[@opcion].fidelity == true
+						puts "Respuesta correcta\n"
+						@correctas+=1;
+					else
+						puts "Respuesta incorrecta\n"
+						@falsas+=1;
+					end
 			else
-				puts "Respuesta incorrecta\n"
-				@falsas+=1;
+				puts "No se introdujo opcion valida, respuesta incorrecta"
+				@falsas += 1
 			end
 		end
 		if @correctas >= @falsas
@@ -67,7 +72,6 @@ class Interfaz
 		else
 			@aprobado = false
 		end
-		return @aprobado
+		return aprobado
 	end
 end
-

@@ -125,11 +125,12 @@ describe Interfaz do
 		@lista.push(@t2)
 		@lista.push(@t3)
 		@testInterfaz = Interfaz.new(@lista)
+		@testInterfaz.opcion = 0
 	end
 	it "Constructor" do
 		@testInterfaz.is_a?(Interfaz)
 	end
 	it "Interfaz de usuario" do
-		@testInterfaz.interface.should be true
+		expect(@testInterfaz.interface).to be true
 	end
 end
