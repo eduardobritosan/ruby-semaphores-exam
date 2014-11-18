@@ -44,7 +44,7 @@ class Interfaz
 	attr_accessor :listExam,:opcion,:aprobado,:falsas,:correctas
 	def initialize(listParam)
 		@listExam = listParam
-		@opcion = -1
+		@opcion = 0
 		@aprobado = false
 		@falsas = 0
 		@correctas = 0
@@ -54,7 +54,7 @@ class Interfaz
 			examenes.printex
 			#while (@opcion < 0 && @opcion >= examenes.answers.length) 
 					#@opcion = gets.chomp.to_i
-			if @opcion <= 0 && @opcion > examenes.answers.length
+			if @opcion >= 0 && @opcion < examenes.answers.length
 					if examenes.answers[@opcion].fidelity == true
 						puts "Respuesta correcta\n"
 						@correctas+=1;

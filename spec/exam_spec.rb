@@ -126,6 +126,7 @@ describe Interfaz do
 		@lista.push(@t3)
 		@testInterfaz = Interfaz.new(@lista)
 		@testInterfaz.opcion = 0
+
 	end
 	it "Constructor" do
 		@testInterfaz.is_a?(Interfaz)
