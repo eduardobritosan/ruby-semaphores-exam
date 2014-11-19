@@ -63,7 +63,7 @@ class Interfaz
 						@falsas+=1;
 					end
 			else
-				puts "No se introdujo opcion valida, respuesta incorrecta"
+				puts "No se introdujo opcion válida, respuesta incorrecta"
 				@falsas += 1
 			end
 		end
