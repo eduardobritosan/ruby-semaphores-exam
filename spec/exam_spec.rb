@@ -59,16 +59,18 @@ describe "Preguntas simples practica 6" do
 	end
 end
 
-describe "Instancia Examen" do
+describe Examen do
 	before :all do
 		@testexamen = Examen.new
+		@testexamen.includeQuestion!(@pregunta1)
+		@testexamen.includeQuestion!(@pregunta1)
 	end
 	it "Existe una instancia examen?" do
 		@testexamen.class.is_a?(Examen)
 	end
 end
 
-describe "Instancia VerFal" do
+describe VerFal do
 	before :all do
 		@testVerFal = VerFal.new("",false,true)
 	end
