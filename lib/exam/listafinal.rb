@@ -2,6 +2,7 @@
 require "exam/version"
 
 Nodo = Struct.new(:value,:next)
+
 class List #Clase lista
 	include Enumerable
 	attr_accessor :tail
