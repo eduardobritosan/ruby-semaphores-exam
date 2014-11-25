@@ -1,0 +1,20 @@
+Tue, 25 Nov 2014 23:28:23 +0000
+./Guardfile	Tue, 11 Nov 2014 19:27:25 +0000
+./LICENSE.txt	Tue, 11 Nov 2014 14:15:59 +0000
+./exam.gemspec	Mon, 17 Nov 2014 10:21:27 +0000
+./README.md	Mon, 17 Nov 2014 10:42:09 +0000
+./travis.log	Tue, 11 Nov 2014 20:08:20 +0000
+./#1#travis.log	Tue, 11 Nov 2014 17:15:18 +0000
+./Gemfile	Tue, 25 Nov 2014 23:21:32 +0000
+./lib/exam/preguntas.rb	Tue, 25 Nov 2014 23:08:15 +0000
+./lib/exam/interfaz.rb	Tue, 25 Nov 2014 23:18:10 +0000
+./lib/exam/version.rb	Tue, 11 Nov 2014 15:39:32 +0000
+./lib/exam/respuesta.rb	Tue, 25 Nov 2014 23:08:11 +0000
+./lib/exam/listafinal.rb	Tue, 25 Nov 2014 22:56:06 +0000
+./lib/exam/examenfinal.rb	Tue, 25 Nov 2014 23:11:20 +0000
+./lib/exam.rb	Sat, 22 Nov 2014 16:34:37 +0000
+./spec/exam_spec.rb	Tue, 25 Nov 2014 22:18:08 +0000
+./spec/spec_helper.rb	Mon, 17 Nov 2014 10:22:27 +0000
+./test/test_exam.rb	Tue, 11 Nov 2014 15:39:32 +0000
+./Gemfile.lock	Mon, 17 Nov 2014 10:38:09 +0000
+./Rakefile	Tue, 25 Nov 2014 23:28:13 +0000
