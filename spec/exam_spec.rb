@@ -127,18 +127,18 @@ describe Interfaz do
 		@t1 = VerFal.new("El sol es azul",false,true)
 		@t2 = VerFal.new("El caballo blanco de santiago es blanco",true,false)
 		@examen = Examen.new
-		@examen.includeQuestionBeggining!(@t1)
-		@examen.includeQuestionBeggining!(@t2)
 		@examen.includeQuestionBeggining!(@t3)
+		@examen.includeQuestionBeggining!(@t2)
+		@examen.includeQuestionBeggining!(@t1)
 		@testInterfaz = Interfaz.new(@examen)
 		@testInterfaz.opcion = 0
 	end
 	it "Constructor" do
 		@testInterfaz.is_a?(Interfaz)
 	end
-	# it "Interfaz de usuario" do
-	# 	expect(@testInterfaz.interface).to be true
-	# end
+	it "Interfaz de usuario" do
+		expect(@testInterfaz.interface).to be true
+	end
 end
 
 describe "Reversible" do
@@ -150,10 +150,10 @@ describe "Reversible" do
 		@t1 = VerFal.new("El sol es azul",false,true)
 		@t2 = VerFal.new("El caballo blanco de santiago es blanco",true,false)
 		@examen = Examen.new
-		@examen.includeQuestionBeggining!(@t1)
-		@examen.includeQuestionBeggining!(@t2)
 		@examen.includeQuestionBeggining!(@t3)
-		@examenRev = @examen.reverse1
+		@examen.includeQuestionBeggining!(@t2)
+		@examen.includeQuestionBeggining!(@t1)
+		@examenRev = @examen.reverse
 		@testInterfazReversa = Interfaz.new(@examenRev)
 		@testInterfazReversa.opcion = 0
 	end
@@ -162,7 +162,7 @@ describe "Reversible" do
 	end
 	it "Prueba reversa 1" do
 		@examenRev.is_a?(Examen)
-		expect(@examenRev.tail) == @t1
+		expect(@examenRev.head) == @t1
 		expect(@testInterfazReversa.interface).to be true
 	end
 end

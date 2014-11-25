@@ -1,6 +1,10 @@
 # -*- encoding : utf-8 -*-
 require "exam/version"
 
+#=*Clase Pregunta de seleccion simple*
+#Contiene el atributo _question_ que se trata del string en donde se guarda la pregunta en si, y el atributo _answers_, que es un array de objetos de clase Respuesta,
+#incluye el modulo _Comparable_, que permite que dos elementos de esta clase o sus hijas se puedan comparar. Tambien posee los metodos getters _getquestion_ y _getanswers_
+#acompanado de un metodo para imprimir la pregunta entera llamada _printpregunta_. Por ultimo, esta definido el _<=> (Spaceship operator)_ para poder usar el modulo Comparable.
 class SelSim
 	attr_reader :question, :answers
 	include Comparable
@@ -26,6 +30,8 @@ class SelSim
 	end
 end
 
+#=*Clase Pregunta de verdadero o falso*
+#Contiene todos los atributos de su clase padre, Seleccion Simple, con la unica diferencia de un _initialize_ ligeramente cambiado.
 class VerFal < SelSim
 	attr_accessor :question, :answers
 	def initialize(question,fidelityTrue,fidelityFalse)
