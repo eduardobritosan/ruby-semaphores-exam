@@ -26,7 +26,7 @@ describe SelSim do
 		end
 	end
 end
-describe List do
+describe DoubleList do
 	before :each do
 		@node = Nodo.new(1,2)
 		@list = DoubleList.new
@@ -62,8 +62,8 @@ end
 describe Examen do
 	before :all do
 		@testexamen = Examen.new
-		@testexamen.includeQuestion!(@pregunta1)
-		@testexamen.includeQuestion!(@pregunta1)
+		@testexamen.includeQuestionBeggining!(@pregunta1)
+		@testexamen.includeQuestionBeggining!(@pregunta1)
 	end
 	it "Existe una instancia examen?" do
 		@testexamen.class.is_a?(Examen)
@@ -127,16 +127,42 @@ describe Interfaz do
 		@t1 = VerFal.new("El sol es azul",false,true)
 		@t2 = VerFal.new("El caballo blanco de santiago es blanco",true,false)
 		@examen = Examen.new
-		@examen.includeQuestion!(@t1)
-		@examen.includeQuestion!(@t2)
-		@examen.includeQuestion!(@t3)
+		@examen.includeQuestionBeggining!(@t1)
+		@examen.includeQuestionBeggining!(@t2)
+		@examen.includeQuestionBeggining!(@t3)
 		@testInterfaz = Interfaz.new(@examen)
 		@testInterfaz.opcion = 0
 	end
 	it "Constructor" do
 		@testInterfaz.is_a?(Interfaz)
 	end
-	it "Interfaz de usuario" do
-		expect(@testInterfaz.interface).to be true
+	# it "Interfaz de usuario" do
+	# 	expect(@testInterfaz.interface).to be true
+	# end
+end
+
+describe "Reversible" do
+	before :all do
+		@ans2 = Respuesta.new("Blanco",true)
+		@ans3 = Respuesta.new("Negro",false)
+		@ans4 = Respuesta.new("Verde",false)
+		@t3 = SelSim.new("Color del caballo blanco de Santiago?",[@ans2,@ans3,@ans4])
+		@t1 = VerFal.new("El sol es azul",false,true)
+		@t2 = VerFal.new("El caballo blanco de santiago es blanco",true,false)
+		@examen = Examen.new
+		@examen.includeQuestionBeggining!(@t1)
+		@examen.includeQuestionBeggining!(@t2)
+		@examen.includeQuestionBeggining!(@t3)
+		@examenRev = @examen.reverse1
+		@testInterfazReversa = Interfaz.new(@examenRev)
+		@testInterfazReversa.opcion = 0
+	end
+	it "Constructor" do
+		@testInterfazReversa.is_a?(Interfaz)
+	end
+	it "Prueba reversa 1" do
+		@examenRev.is_a?(Examen)
+		expect(@examenRev.tail) == @t1
+		expect(@testInterfazReversa.interface).to be true
 	end
 end

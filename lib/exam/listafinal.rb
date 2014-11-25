@@ -33,15 +33,20 @@ end
 
 Nodo2 = Struct.new(:prev,:value,:next)
 
-class DoubleList
+class DoubleList < List
 	attr_accessor :tail,:head
+	include Enumerable
 	def initialize
 		@tail, @head = nil
 	end
 	def pop
-		aux = @tail
-		@tail = aux.next
-		aux.value
+		if @tail == nil
+			return nil
+		else
+			aux = @tail
+			@tail = aux.next
+			aux.value
+		end
 	end
 	def push(newValue)
 		if @tail == nil
@@ -53,9 +58,13 @@ class DoubleList
 		end
 	end
 	def shift
-		aux = @head
-		@head =aux.prev
-		aux.value
+		if @head == nil
+			return nil
+		else
+			aux = @head
+			@head =aux.prev
+			aux.value
+		end
 	end
 	def unshift(newValue)
 		if @head == nil
@@ -64,6 +73,13 @@ class DoubleList
 		elsif
 			aux = Nodo2.new(@head,newValue,nil)
 			@head = aux
+		end
+	end
+	def each
+		aux = @tail
+		while aux != nil 
+			yield aux.value
+			aux = aux.next
 		end
 	end
 end
