@@ -35,7 +35,6 @@ Nodo2 = Struct.new(:prev,:value,:next)
 
 class DoubleList < List
 	attr_accessor :tail,:head
-	include Enumerable
 	def initialize
 		@tail, @head = nil
 	end
@@ -73,13 +72,6 @@ class DoubleList < List
 		elsif
 			aux = Nodo2.new(@head,newValue,nil)
 			@head = aux
-		end
-	end
-	def each
-		aux = @tail
-		while aux != nil 
-			yield aux.value
-			aux = aux.next
 		end
 	end
 end

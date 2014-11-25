@@ -28,16 +28,10 @@ class Examen
 			yield n
 		end
 	end
-	def reverse1
-		@examenReverso = self
-		@examenReverso.each do |n|
-			@examenReverso.preguntas.pop
-			@examenReverso.preguntas.unshift(n)
-		end
-		@examenReverso
-	end
-	def reverse2
-		@reversedExam = Examen.new(@listareverse = @preguntas.reverse!)
+	def reverse
+		@reversedExam = Examen.new
+		@preguntas.each{|v| @reversedExam.includeQuestionBeggining!(v)}
+		@reversedExam
 	end
 end
 
