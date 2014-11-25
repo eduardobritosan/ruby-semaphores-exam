@@ -1,7 +1,7 @@
 # -*- encoding : utf-8 -*-
 require "exam/version"
 
-#=*Clase Examen*
+#=Clase Examen
 #Contiene el atributo _pregunta_, que contiene una lista doblemente enlazada con todas las preguntas de ese examen. 
 #Posee los metodos _initialize_ sin ningun parametro pasado, _printexam_ que se encarga de imprimir el examen entero, _includeQuestionBeggining!_ es basicamente un push que provee 
 #la clase examen para abstraer al usuario de los metodos de la lista, _deleteQuestionBeggining!_ es un pop, _tail_ y _head_ son accesos directos a la cabeza y cola de la lista, 

@@ -1,7 +1,7 @@
 # -*- encoding : utf-8 -*-
 require "exam/version"
 
-#=*Clase Interfaz*
+#=Clase Interfaz
 #Clase que provee al usuario la capacidad de interactuar con el examen. Posee el atributo _exam_, que guarda el examen al que se va a referir esta interfaz, _opcion_ que guarda la eleccion 
 #del usuario en cada pregunta, _aprobado_, un booleano que guarda si el alumno ha aprobado o no, _falsas_ que guarda el numero de respuestas incorrectas y _correctas_,
 #que almacena lo que su mismo nombre indica. Posee el metodo _initialize, al que se le pasa solo el parametro del examen, y el metodo _interface_ que recorre todos los elementos de _exam_, 
