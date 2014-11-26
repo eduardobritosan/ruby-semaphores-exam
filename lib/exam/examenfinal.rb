@@ -34,7 +34,7 @@ class Examen
 			yield n
 		end
 	end
-	def reverse
+	def reverse #funcion reverse
 		@reversedExam = Examen.new
 		@preguntas.each{|v| @reversedExam.includeQuestionBeggining!(v)}
 		@reversedExam
