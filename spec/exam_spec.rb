@@ -1,6 +1,7 @@
 # -*- encoding : utf-8 -*-
+$LOAD_PATH << '.'
 require 'spec_helper'
-require 'exam'
+require "lib/exam.rb"
 
 describe Respuesta do
 	before :all do
