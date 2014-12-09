@@ -1,5 +1,5 @@
 # -*- encoding : utf-8 -*-
-require "../exam"
+ require "exam/version"
 
 class Quiz
   RIGHT = :right
@@ -17,9 +17,9 @@ class Quiz
 
   def question(text, preguntas)
     q = SelSim.new(text, preguntas)
-    #questions << q 
-    #puts q if $DEBUG
-    #@counter = 0
+    questions << q 
+    puts q if $DEBUG
+    @counter = 0
   end
 
   def to_s
@@ -52,6 +52,7 @@ EOQUIZ
   end
 end
 
+=begin
 if __FILE__ == $0
   quiz = Quiz.new("Cuestionario de PFS 10/12/2011") do
     question '¿En que año Cristobal Colón descubrió América?',
@@ -72,4 +73,4 @@ if __FILE__ == $0
   puts quiz
   puts "************************"
   quiz.run
-end
+=end

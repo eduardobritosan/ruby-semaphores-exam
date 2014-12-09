@@ -1,5 +1,5 @@
 # -*- encoding : utf-8 -*-
-require "../exam"
+ require "exam/version"
 
 #=Nodo de lista simplemente enlazada
 #Contiene dos valores, _value_, que tiene el elemento que contiene el nodo, y _next_, que tiene dentro el siguiente elemento de la lista.

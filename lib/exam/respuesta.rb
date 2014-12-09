@@ -1,5 +1,5 @@
 # -*- encoding : utf-8 -*-
-require "../exam"
+ require "exam/version"
 
 #=Clase respuesta
 #Contiene el atributo _string_, en donde se guarda la cadena que forma la respuesta, y el atributo _fidelity_ donde se guarda la veracidad de la respuesta, es decir

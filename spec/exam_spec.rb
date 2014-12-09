@@ -1,7 +1,6 @@
 # -*- encoding : utf-8 -*-
-$LOAD_PATH << '.'
 require 'spec_helper'
-require "lib/exam.rb"
+require 'exam'
 
 describe Respuesta do
 	before :all do
@@ -152,7 +151,7 @@ describe Quiz do
 		wrong =>'2',
 		wrong =>'muchos',
 		wrong =>'los que defina el usuario'
-		question "En Ruby los bloque son objetos que continen código",
+		question "En Ruby los bloques son objetos que contienen código",
 		wrong =>'Cierto',
 		right =>'Falso'
 		}
@@ -160,6 +159,12 @@ describe Quiz do
 	it "Constructor" do
 	@quiz.is_a?(Quiz)
 	end	
+	
+	
+	it "Pregunta1" do
+	@quiz.right.should == true
+	end
+	
 	
 end
 
