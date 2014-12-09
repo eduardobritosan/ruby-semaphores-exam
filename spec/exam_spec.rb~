@@ -147,13 +147,13 @@ describe Quiz do
 	before :all do  
 		@quiz = Quiz.new("Cuestionario de LPP 05/12/2014") {
 		question '¿Cuántos argumentos de tipo bloque puede recibir un método?',
-		right =>'1',
-		wrong =>'2',
-		wrong =>'muchos',
-		wrong =>'los que defina el usuario'
-		question "En Ruby los bloque son objetos que continen código",
-		wrong =>'Cierto',
-		right =>'Falso'
+		right =>’1’,
+		wrong =>’2’,
+		wrong =>’muchos’,
+		wrong =>’los que defina el usuario’
+		question "En Ruby los bloque son objetos que continen c ́odigo",
+		wrong =>’Cierto’,
+		right =>’Falso’
 		}
 	end
 	it "Constructor" do
