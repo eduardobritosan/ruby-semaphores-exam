@@ -1,5 +1,5 @@
 # -*- encoding : utf-8 -*-
-require "../exam"
+require "exam/version"
 
 #=Clase Pregunta de seleccion simple
 #Contiene el atributo _question_ que se trata del string en donde se guarda la pregunta en si, y el atributo _answers_, que es un array de objetos de clase Respuesta,

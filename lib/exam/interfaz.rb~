@@ -1,5 +1,5 @@
 # -*- encoding : utf-8 -*-
-require "../exam"
+require "exam/version"
 
 #=Clase Interfaz
 #Clase que provee al usuario la capacidad de interactuar con el examen. Posee el atributo _exam_, que guarda el examen al que se va a referir esta interfaz, _opcion_ que guarda la eleccion 

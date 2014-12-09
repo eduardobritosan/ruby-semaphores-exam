@@ -1,5 +1,5 @@
 # -*- encoding : utf-8 -*-
-require "../exam"
+require "exam/version"
 
 class Quiz
   RIGHT = :right
