@@ -155,15 +155,16 @@ describe Quiz do
 		wrong =>'Cierto',
 		right =>'Falso'
 		}
+		@question1 = @quiz.questions[0]
 	end
 	it "Constructor" do
 	@quiz.is_a?(Quiz)
 	end	
 	
 	
-	it "Pregunta1" do
-	@quiz.right.should == true
-	end
+#	it "Pregunta" do
+#	@question1 = 
+#	end
 	
 	
 end
