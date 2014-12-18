@@ -199,6 +199,9 @@ describe "OrangeTree" do
 		@arbol1.is_a?(OrangeTree)
 	end
 	it "Comprobacion del metodo height del naranjero" do
-		expect(arbol1.height).to eq(0)
+		expect(@arbol1.height).to eq(0)
+	end
+	it "Comprobacion del metodo que cuenta las naranjas" do
+		expect(@arbol1.count_the_oranges).to eq(0)
 	end
 end

@@ -4,4 +4,12 @@ class OrangeTree
 		@orange_count = 0
 		@alive = true
 	end
+
+	def height
+		if @alive
+			@height
+		else
+			'A dead tree is not very tall. :('
+		end
+	end
 end
