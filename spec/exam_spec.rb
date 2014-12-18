@@ -204,18 +204,27 @@ describe "OrangeTree pruebas de inicializacion" do
 	it "Comprobacion del metodo que cuenta las naranjas" do
 		expect(@arbol1.count_the_oranges).to eq(0)
 	end
-	it "Comprobacion del metodo que cuenta las naranjas" do
-		expect(@arbol1.one_year_passes).to eq("This year your tree grew to 0.4m tall," +
-											  " but is still too young to bear fruit.")
-	end
 end
 
 describe "OrangeTree pruebas de funcionamiento" do
 	before :all do
 		@arbol2 = OrangeTree.new
-		@arbol2.one_year_passes
+		for i in 0..5
+   			@arbol2.one_year_passes
+		end
 	end
 	it "Comprobacion del metodo que coge una naranja" do
-		expect(@arbol1.pick_an_orange).to eq("You pick a juicy, delicious orange!")
+		expect(@arbol2.pick_an_orange).to eq("You pick a juicy, delicious orange!")
 	end
 end
+
+describe "OrangeTree pruebas crecimiento" do
+	before :all do
+		@arbol3 = OrangeTree.new
+	end
+	it "Comprobacion del metodo que cuenta las naranjas" do
+		expect(@arbol3.one_year_passes).to eq("This year your tree grew to 0.4m tall," +
+											  " but is still too young to bear fruit.")
+	end
+end
+
