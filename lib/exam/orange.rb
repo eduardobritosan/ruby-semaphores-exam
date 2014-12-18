@@ -42,4 +42,17 @@ class OrangeTree
 			'A year later, the tree is still dead. :('
 		end
 	end
+
+	def pick_an_orange
+		if @alive
+			if @orange_count > 0
+				@orange_count = @orange_count - 1
+				'You pick a juicy, delicious orange!'
+			else
+				'You search every branch, but find no oranges.'
+			end
+		else
+			'A dead tree has nothing to pick. :('
+		end
+	end
 end
