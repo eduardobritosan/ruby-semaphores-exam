@@ -204,4 +204,9 @@ describe "OrangeTree" do
 	it "Comprobacion del metodo que cuenta las naranjas" do
 		expect(@arbol1.count_the_oranges).to eq(0)
 	end
+	it "Comprobacion del metodo que cuenta las naranjas" do
+		expect(@arbol1.one_year_passes).to eq("This year your tree grew to 0.4m tall," +
+											  " but is still too young to bear fruit.")
+	end
+
 end
