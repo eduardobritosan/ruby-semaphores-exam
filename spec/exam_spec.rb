@@ -155,16 +155,15 @@ describe Quiz do
 		wrong =>'Cierto',
 		right =>'Falso'
 		}
-		@question1 = @quiz.questions[0]
 	end
 	it "Constructor" do
 	@quiz.is_a?(Quiz)
 	end	
 	
 	
-#	it "Pregunta" do
-#	@question1 = 
-#	end
+	it "to_s" do
+		expect(@quiz.to_s).to eq("Hola"); 
+	end
 	
 	
 end
@@ -193,5 +192,14 @@ describe "Reversible" do
 		@examenRev.is_a?(Examen)
 		expect(@examenRev.head) == @t1
 		expect(@testInterfazReversa.interface).to be true
+	end
+end
+
+describe "OrangeTree" do
+	before :all do
+		@arbol1 = OrangeTree.new
+	end
+	it "Comprobacion de inicializacion del Arbol" do
+		@arbol1.is_a?(OrangeTree)
 	end
 end

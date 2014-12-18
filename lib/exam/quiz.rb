@@ -22,10 +22,18 @@ class Quiz
     @counter = 0
   end
 
-  def to_s
-    out = <<"EOQUIZ"
-#{self.name}
+  def imprimir
+    questions.each do |n|
+      n.printpregunta
+    end
+  end
 
+  def to_s
+
+    out = <<"EOQUIZ"
+
+#{self.name}
+#{imprimir}
 #{self.questions.join("\n")}
 EOQUIZ
   end
