@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>search_index.js - RDoc Documentation</title>
+
+<link href="../../fonts.css" rel="stylesheet">
+<link href="../../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../../";
+</script>
+
+<script src="../../js/jquery.js"></script>
+<script src="../../js/navigation.js"></script>
+<script src="../../js/search_index.js"></script>
+<script src="../../js/search.js"></script>
+<script src="../../js/searcher.js"></script>
+<script src="../../js/darkfish.js"></script>
+
+
+<body id="top" role="document" class="file">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../../table_of_contents.html#pages">Pages</a>
+    <a href="../../table_of_contents.html#classes">Classes</a>
+    <a href="../../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="project-metadata">
+    <div id="fileindex-section" class="nav-section">
+  <h3>Pages</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../../Gemfile.html">Gemfile</a>
+  
+    <li><a href="../../Gemfile_lock.html">Gemfile.lock</a>
+  
+    <li><a href="../../Guardfile.html">Guardfile</a>
+  
+    <li><a href="../../LICENSE_txt.html">LICENSE</a>
+  
+    <li><a href="../../README_md.html">README</a>
+  
+    <li><a href="../../Rakefile.html">Rakefile</a>
+  
+    <li><a href="../../doc/DoubleList_html.html">DoubleList.html</a>
+  
+    <li><a href="../../doc/Exam_html.html">Exam.html</a>
+  
+    <li><a href="../../doc/Examen_html.html">Examen.html</a>
+  
+    <li><a href="../../doc/Interfaz_html.html">Interfaz.html</a>
+  
+    <li><a href="../../doc/List_html.html">List.html</a>
+  
+    <li><a href="../../doc/Nodo_html.html">Nodo.html</a>
+  
+    <li><a href="../../doc/Nodo2_html.html">Nodo2.html</a>
+  
+    <li><a href="../../doc/Respuesta_html.html">Respuesta.html</a>
+  
+    <li><a href="../../doc/SelSim_html.html">SelSim.html</a>
+  
+    <li><a href="../../doc/VerFal_html.html">VerFal.html</a>
+  
+    <li><a href="../../doc/_index_html.html">_index.html</a>
+  
+    <li><a href="../../doc/class_list_html.html">class_list.html</a>
+  
+    <li><a href="../../doc/css/common_css.html">common.css</a>
+  
+    <li><a href="../../doc/css/full_list_css.html">full_list.css</a>
+  
+    <li><a href="../../doc/css/style_css.html">style.css</a>
+  
+    <li><a href="../../doc/file_README_html.html">file.README.html</a>
+  
+    <li><a href="../../doc/file_list_html.html">file_list.html</a>
+  
+    <li><a href="../../doc/frames_html.html">frames.html</a>
+  
+    <li><a href="../../doc/index_html.html">index.html</a>
+  
+    <li><a href="../../doc/js/app_js.html">app.js</a>
+  
+    <li><a href="../../doc/js/full_list_js.html">full_list.js</a>
+  
+    <li><a href="../../doc/js/jquery_js.html">jquery.js</a>
+  
+    <li><a href="../../doc/method_list_html.html">method_list.html</a>
+  
+    <li><a href="../../doc/top-level-namespace_html.html">top-level-namespace.html</a>
+  
+    <li><a href="../../exam_gemspec.html">exam.gemspec</a>
+  
+    <li><a href="../../html/#1#travis_log_html.html">#1#travis_log.html</a>
+  
+    <li><a href="../../html/DoubleList_html.html">DoubleList.html</a>
+  
+    <li><a href="../../html/Exam_html.html">Exam.html</a>
+  
+    <li><a href="../../html/Examen_html.html">Examen.html</a>
+  
+    <li><a href="../../html/Gemfile_html.html">Gemfile.html</a>
+  
+    <li><a href="../../html/Gemfile_lock_html.html">Gemfile_lock.html</a>
+  
+    <li><a href="../../html/Guardfile_html.html">Guardfile.html</a>
+  
+    <li><a href="../../html/Interfaz_html.html">Interfaz.html</a>
+  
+    <li><a href="../../html/LICENSE_txt_html.html">LICENSE_txt.html</a>
+  
+    <li><a href="../../html/List_html.html">List.html</a>
+  
+    <li><a href="../../html/Object_html.html">Object.html</a>
+  
+    <li><a href="../../html/README_md_html.html">README_md.html</a>
+  
+    <li><a href="../../html/Rakefile_html.html">Rakefile.html</a>
+  
+    <li><a href="../../html/Respuesta_html.html">Respuesta.html</a>
+  
+    <li><a href="../../html/SelSim_html.html">SelSim.html</a>
+  
+    <li><a href="../../html/VerFal_html.html">VerFal.html</a>
+  
+    <li><a href="../../html/doc/DoubleList_html_html.html">DoubleList_html.html</a>
+  
+    <li><a href="../../html/doc/Exam_html_html.html">Exam_html.html</a>
+  
+    <li><a href="../../html/doc/Examen_html_html.html">Examen_html.html</a>
+  
+    <li><a href="../../html/doc/Interfaz_html_html.html">Interfaz_html.html</a>
+  
+    <li><a href="../../html/doc/List_html_html.html">List_html.html</a>
+  
+    <li><a href="../../html/doc/Nodo2_html_html.html">Nodo2_html.html</a>
+  
+    <li><a href="../../html/doc/Nodo_html_html.html">Nodo_html.html</a>
+  
+    <li><a href="../../html/doc/Respuesta_html_html.html">Respuesta_html.html</a>
+  
+    <li><a href="../../html/doc/SelSim_html_html.html">SelSim_html.html</a>
+  
+    <li><a href="../../html/doc/VerFal_html_html.html">VerFal_html.html</a>
+  
+    <li><a href="../../html/doc/_index_html_html.html">_index_html.html</a>
+  
+    <li><a href="../../html/doc/class_list_html_html.html">class_list_html.html</a>
+  
+    <li><a href="../../html/doc/css/common_css_html.html">common_css.html</a>
+  
+    <li><a href="../../html/doc/css/full_list_css_html.html">full_list_css.html</a>
+  
+    <li><a href="../../html/doc/css/style_css_html.html">style_css.html</a>
+  
+    <li><a href="../../html/doc/file_README_html_html.html">file_README_html.html</a>
+  
+    <li><a href="../../html/doc/file_list_html_html.html">file_list_html.html</a>
+  
+    <li><a href="../../html/doc/frames_html_html.html">frames_html.html</a>
+  
+    <li><a href="../../html/doc/index_html_html.html">index_html.html</a>
+  
+    <li><a href="../../html/doc/js/app_js_html.html">app_js.html</a>
+  
+    <li><a href="../../html/doc/js/full_list_js_html.html">full_list_js.html</a>
+  
+    <li><a href="../../html/doc/js/jquery_js_html.html">jquery_js.html</a>
+  
+    <li><a href="../../html/doc/method_list_html_html.html">method_list_html.html</a>
+  
+    <li><a href="../../html/doc/top-level-namespace_html_html.html">top-level-namespace_html.html</a>
+  
+    <li><a href="../../html/exam_gemspec_html.html">exam_gemspec.html</a>
+  
+    <li><a href="../../html/fonts_css.html">fonts.css</a>
+  
+    <li><a href="../../html/index_html.html">index.html</a>
+  
+    <li><a href="../../html/js/darkfish_js.html">darkfish.js</a>
+  
+    <li><a href="../../html/js/jquery_js.html">jquery.js</a>
+  
+    <li><a href="../../html/js/navigation_js.html">navigation.js</a>
+  
+    <li><a href="../../html/js/search_js.html">search.js</a>
+  
+    <li><a href="../../html/js/search_index_js.html">search_index.js</a>
+  
+    <li><a href="../../html/js/searcher_js.html">searcher.js</a>
+  
+    <li><a href="../../html/rdoc_css.html">rdoc.css</a>
+  
+    <li><a href="../../html/table_of_contents_html.html">table_of_contents.html</a>
+  
+    <li><a href="../../html/travis_log_html.html">travis_log.html</a>
+  
+    <li><a href="../../travis_log.html">travis.log</a>
+  
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-label="Page html/js/search_index.js">
+
+<p>var search_data = {“index”:{“<a
+href=""doublelist","exam","examen","interfaz","list","object","respuesta","selsim","verfal","<=>()”,“deletequestionbeggining!()”,“each()”,“each()”,“getanswers()”,“getquestion()”,“head()”,“includequestionbeggining!()”,“interface()”,“new()”,“new()”,“new()”,“new()”,“new()”,“new()”,“new()”,“pop()”,“pop()”,“printexam()”,“printpregunta()”,“push()”,“push()”,“reverse()”,“setup()”,“shift()”,“tail()”,“tear_down()”,“test_failure()”,“test_simple()”,“test_type_check()”,“unshift()”,“#1#travis.log”,“gemfile”,“gemfile.lock”,“guardfile”,“license”,“readme”,“rakefile”,“exam.gemspec”,“travis.log”“>searchIndex”:</a>,“<a
+href=""doublelist","exam","examen","interfaz","list","object","respuesta","selsim","verfal","selsim#<=>()”,“examen#deletequestionbeggining!()”,“examen#each()”,“list#each()”,“selsim#getanswers()”,“selsim#getquestion()”,“examen#head()”,“examen#includequestionbeggining!()”,“interfaz#interface()”,“doublelist::new()”,“examen::new()”,“interfaz::new()”,“list::new()”,“respuesta::new()”,“selsim::new()”,“verfal::new()”,“doublelist#pop()”,“list#pop()”,“examen#printexam()”,“selsim#printpregunta()”,“doublelist#push()”,“list#push()”,“examen#reverse()”,“doublelist#setup()”,“doublelist#shift()”,“examen#tail()”,“doublelist#tear_down()”,“doublelist#test_failure()”,“doublelist#test_simple()”,“doublelist#test_type_check()”,“doublelist#unshift()”,“”,“”,“”,“”,“”,“”,“”,“”,“”“>longSearchIndex”:</a>,“info”:[[“DoubleList”,“”,“DoubleList.html”,“”,“&lt;p&gt;*Clase
+lista doblemente enlazada*n&lt;p&gt;Contiene el atributo <em>tail</em>, que
+es el primer elemento por lanizquierda, …<a
+href=”“Exam”,“”,“Exam.html”,“”,“”“>n”],</a>,[“Examen”,“”,“Examen.html”,“”,“&lt;p&gt;*Clase
+Examen*n&lt;p&gt;Contiene el atributo <em>pregunta</em>, que contiene una
+lista doblementenenlazada con todas las
+…n”],[“Interfaz”,“”,“Interfaz.html”,“”,“&lt;p&gt;*Clase
+Interfaz*n&lt;p&gt;Clase que provee al usuario la capacidad de interactuar
+con el examen.nPosee el atributo
+…n”],[“List”,“”,“List.html”,“”,“&lt;p&gt;*Clase lista*n&lt;p&gt;Contiene el
+atributo <em>tail</em>, que es el primer elemento por lanizquierda, el
+modulo <em>Enumerable</em> …<a
+href=”“Object”,“”,“Object.html”,“”,“”“>n”],</a>,[“Respuesta”,“”,“Respuesta.html”,“”,“&lt;p&gt;*Clase
+respuesta*n&lt;p&gt;Contiene el atributo <em>string</em>, en donde se
+guarda la cadena quenforma la respuesta, y
+…n”],[“SelSim”,“”,“SelSim.html”,“”,“&lt;p&gt;*Clase Pregunta de seleccion
+simple*n&lt;p&gt;Contiene el atributo <em>question</em> que se trata del
+string en donde sen…n”],[“VerFal”,“”,“VerFal.html”,“”,“&lt;p&gt;*Clase
+Pregunta de verdadero o falso*n&lt;p&gt;Contiene todos los atributos de su
+clase padre, Seleccion Simple …<a
+href=”“<=>”,“SelSim”,“SelSim.html#method-i-3C-3D-3E”,“(other)”,“”“>n”],</a>,[“<a
+href=""each","Examen","Examen.html#method-i-each","()",""">deleteQuestionBeggining!”,“Examen”,“Examen.html#method-i-deleteQuestionBeggining-21”,“()”,“”],</a>,[“<a
+href=""getanswers","SelSim","SelSim.html#method-i-getanswers","()",""">each”,“List”,“List.html#method-i-each”,“()”,“”],</a>,[“<a
+href=""head","Examen","Examen.html#method-i-head","()",""">getquestion”,“SelSim”,“SelSim.html#method-i-getquestion”,“()”,“”],</a>,[“<a
+href=""interface","Interfaz","Interfaz.html#method-i-interface","()",""">includeQuestionBeggining!”,“Examen”,“Examen.html#method-i-includeQuestionBeggining-21”,“(pregunta)”,“”],</a>,[“<a
+href=""new","Examen","Examen.html#method-c-new","()",""">new”,“DoubleList”,“DoubleList.html#method-c-new”,“()”,“”],</a>,[“<a
+href=""new","List","List.html#method-c-new","()",""">new”,“Interfaz”,“Interfaz.html#method-c-new”,“(examParam)”,“”],</a>,[“<a
+href=""new","SelSim","SelSim.html#method-c-new","(question,answers)",""">new”,“Respuesta”,“Respuesta.html#method-c-new”,“(string,fidelity)”,“”],</a>,[“<a
+href=""pop","DoubleList","DoubleList.html#method-i-pop","()",""">new”,“VerFal”,“VerFal.html#method-c-new”,“(question,fidelityTrue,fidelityFalse)”,“”],</a>,[“<a
+href=""printexam","Examen","Examen.html#method-i-printexam","()",""">pop”,“List”,“List.html#method-i-pop”,“()”,“”],</a>,[“<a
+href=""push","DoubleList","DoubleList.html#method-i-push","(newValue)",""">printpregunta”,“SelSim”,“SelSim.html#method-i-printpregunta”,“()”,“”],</a>,[“<a
+href=""reverse","Examen","Examen.html#method-i-reverse","()",""">push”,“List”,“List.html#method-i-push”,“(newValue)”,“”],</a>,[“<a
+href=""shift","DoubleList","DoubleList.html#method-i-shift","()",""">setup”,“DoubleList”,“DoubleList.html#method-i-setup”,“()”,“”],</a>,[“<a
+href=""tear_down","DoubleList","DoubleList.html#method-i-tear_down","()",""">tail”,“Examen”,“Examen.html#method-i-tail”,“()”,“”],</a>,[“<a
+href=""test_simple","DoubleList","DoubleList.html#method-i-test_simple","()",""">test_failure”,“DoubleList”,“DoubleList.html#method-i-test_failure”,“()”,“”],</a>,[“<a
+href=""unshift","DoubleList","DoubleList.html#method-i-unshift","(newValue)",""">test_type_check”,“DoubleList”,“DoubleList.html#method-i-test_type_check”,“()”,“”],</a>,[“#1#travis.log”,“”,“#1#travis_log.html”,“”,“&lt;p&gt;Command
+line: “travis”nn&lt;pre&gt;  <em>__</em>                                
+__n /        |           
+…&lt;/pre&gt;n”],[“Gemfile”,“”,“Gemfile.html”,“”,“&lt;p&gt;source
+‘rubygems.org’n&lt;p&gt;# Specify your gem’s dependencies in <a
+href="../../exam_gemspec.html">exam.gemspec</a> gemspec gem ‘guard’
+gemn‘guard-rspec’
+…n”],[“Gemfile.lock”,“”,“Gemfile_lock.html”,“”,“&lt;p&gt;PATHnn&lt;pre&gt;remote:
+.nspecs:n  exam
+(0.0.1)&lt;/pre&gt;n&lt;p&gt;GEMn”],[“Guardfile”,“”,“Guardfile.html”,“”,“&lt;p&gt;guard
+‘bundler’
+donn&lt;pre&gt;watch(‘Gemfile’)nwatch(/^.+\.gemspec/)&lt;/pre&gt;n&lt;p&gt;endn”],[“LICENSE”,“”,“LICENSE_txt.html”,“”,“&lt;p&gt;Copyright
+© 2014 Eduardo Brito Sanchezn&lt;p&gt;MIT Licensen&lt;p&gt;Permission is
+hereby granted, free of charge, to any
+…n”],[“README”,“”,“README_md.html”,“”,“&lt;p&gt;Examn&lt;p&gt;TODO: Write a
+gem
+descriptionn&lt;p&gt;Installationn”],[“Rakefile”,“”,“Rakefile.html”,“”,“&lt;p&gt;$:.unshift
+File.dirname(__FILE__) + ‘lib’ require “bundler/gem_tasks”n&lt;p&gt;require
+‘rspec/core/rake_task’
+…n”],[“exam.gemspec”,“”,“exam_gemspec.html”,“”,“&lt;p&gt;lib =
+File.expand_path(‘../lib’, __FILE__) $LOAD_PATH.unshift(lib)
+unlessn$LOAD_PATH.include?(lib) require
+…n”],[“travis.log”,“”,“travis_log.html”,“”,“&lt;p&gt;Command line: “travis
+login –auto”nn&lt;pre&gt;  <em>__</em>                                 __n
+/        …&lt;/pre&gt;n”]]}}</p>
+</main>
+
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://rdoc.rubyforge.org">RDoc</a> 4.1.2.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

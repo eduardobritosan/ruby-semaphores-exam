@@ -113,7 +113,7 @@
 
   <section class="description">
     
-<h1 id="class-Examen-label-%2AClase+Examen%2A">*Clase Examen*<span><a href="#class-Examen-label-%2AClase+Examen%2A">&para;</a> <a href="#documentation">&uarr;</a></span></h1>
+<h1 id="class-Examen-label-Clase+Examen">Clase <a href="Examen.html">Examen</a><span><a href="#class-Examen-label-Clase+Examen">&para;</a> <a href="#documentation">&uarr;</a></span></h1>
 
 <p>Contiene el atributo <em>pregunta</em>, que contiene una lista doblemente
 enlazada con todas las preguntas de ese examen.  Posee los metodos
@@ -399,7 +399,7 @@ funcional.</p>
           
           <div class="method-source-code" id="reverse-source">
             <pre><span class="ruby-comment"># File lib/exam/examenfinal.rb, line 36</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">reverse</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">reverse</span> <span class="ruby-comment">#funcion reverse</span>
         <span class="ruby-ivar">@reversedExam</span> = <span class="ruby-constant">Examen</span>.<span class="ruby-identifier">new</span>
         <span class="ruby-ivar">@preguntas</span>.<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">v</span><span class="ruby-operator">|</span> <span class="ruby-ivar">@reversedExam</span>.<span class="ruby-identifier">includeQuestionBeggining!</span>(<span class="ruby-identifier">v</span>)}
         <span class="ruby-ivar">@reversedExam</span>

@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.version       = Exam::VERSION
   spec.authors       = ["Eduardo Brito Sanchez"]
   spec.email         = ["eduardo_brito27@hotmail.com"]
-  spec.description   = %q{ Write a gem description}
+  spec.description   = %q{Gema de practicas de LPP, contiene practicas desde la 6 hasta la 12}
   spec.summary       = %q{Gema de examenes, comoda}
   spec.homepage      = ""
   spec.license       = "MIT"

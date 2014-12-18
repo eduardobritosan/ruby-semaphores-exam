@@ -85,19 +85,19 @@ describe "Pruebas Preguntas Comparable Practica 8" do
 		@t2 = VerFal.new("El caballo blanco de santiago es blanco",true,false)
 	end
 	it "Existe el comparador? <" do
-		(@t1 < @t2).should be false
+		expect(@t1 < @t2).to be false
 	end
 	it "Existe el comparador? >" do
-		(@t1 > @t2).should be true
+		expect(@t1 > @t2).to be true
 	end
 	it "Existe el comparador? ==" do
-		(@t1 == @t2).should be false
+		expect(@t1 == @t2).to be false
 	end
 	it "Existe el comparador? <=" do
-		(@t1 <= @t2).should be false
+		expect(@t1 <= @t2).to be false
 	end
 	it "Existe el comparador? >=" do
-		(@t1 >= @t2).should be true
+		expect(@t1 >= @t2).to be true
 	end
 end
 
@@ -108,11 +108,7 @@ describe "Pruebas Enumerable lista Practica 8" do
 		@lista.push(@t2)
 	end
 	it "Prueba de existencia each" do
-		@lista.max.should eq(@t1)
-#		@lista.min.should eq(@t2)
-#		@lista.collect.should
-#		@lista.find.should
-#		@lista.all.should eq(@t1)
+		expect(@lista.max).to eq(@t1)
 	end
 end
 
@@ -199,7 +195,10 @@ describe "OrangeTree" do
 	before :all do
 		@arbol1 = OrangeTree.new
 	end
-	it "Comprobacion de inicializacion del Arbol" do
+	it "Comprobacion de inicializacion del naranjero" do
 		@arbol1.is_a?(OrangeTree)
+	end
+	it "Comprobacion del metodo height del naranjero" do
+		expect(arbol1.height).to eq(0)
 	end
 end

@@ -7,8 +7,8 @@ task :default => :spec
 
 require 'rdoc/task'
 
-desc 'Generador de documentacion para gema Exam'
+# desc 'Generador de documentacion para gema Exam'
 
-RDoc::Task.new do |rdoc|
-	task :default => :rdoc
-end
+# RDoc::Task.new do |rdoc|
+# 	task :default => :rdoc
+# end
