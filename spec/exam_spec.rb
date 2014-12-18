@@ -204,6 +204,11 @@ describe "OrangeTree pruebas de inicializacion" do
 	it "Comprobacion del metodo que cuenta las naranjas" do
 		expect(@arbol1.count_the_oranges).to eq(0)
 	end
+	it "Existencia de las variables de instancia" do
+		expect(@arbol1.instance_variable_defined?(:@height)).to be true
+		expect(@arbol1.instance_variable_defined?(:@orange_count)).to be true
+		expect(@arbol1.instance_variable_defined?(:@alive)).to be true
+	end
 end
 
 describe "OrangeTree pruebas de funcionamiento" do
