@@ -12,4 +12,13 @@ class OrangeTree
 			'A dead tree is not very tall. :('
 		end
 	end
+
+	def count_the_oranges
+		if @alive
+			@orange_count
+		else
+			'A dead tree has no oranges. :('
+		end
+	end
+
 end
