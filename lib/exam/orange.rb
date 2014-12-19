@@ -1,4 +1,5 @@
 class OrangeTree
+	attr_reader :alive
 	def initialize
 		@height = 0
 		@orange_count = 0
@@ -9,7 +10,7 @@ class OrangeTree
 		if @alive
 			@height
 		else
-			'A dead tree is not very tall. :('
+			"A dead tree is not very tall. :("
 		end
 	end
 
@@ -17,7 +18,7 @@ class OrangeTree
 		if @alive
 			@orange_count
 		else
-			'A dead tree has no oranges. :('
+			"A dead tree has no oranges. :("
 		end
 	end
 
@@ -28,7 +29,7 @@ class OrangeTree
 			if @height > 10 && rand(2) > 0
 				# tree dies
 				@alive = false
-				'Oh, no! The tree is too old, and has died. :('
+				"Oh, no! The tree is too old, and has died. :(\n"
 			elsif @height > 2
 				# new oranges grow
 				@orange_count = (@height * 15 - 25).to_i
@@ -39,7 +40,7 @@ class OrangeTree
 				" but is still too young to bear fruit."
 			end
 		else
-			'A year later, the tree is still dead. :('
+			"A year later, the tree is still dead. :("
 		end
 	end
 
