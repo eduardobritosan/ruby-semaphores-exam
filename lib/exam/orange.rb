@@ -4,6 +4,7 @@ class OrangeTree
 		@height = 0
 		@orange_count = 0
 		@alive = true
+		@semaphore = Mutex.new
 	end
 
 	def height
@@ -32,9 +33,11 @@ class OrangeTree
 				"Oh, no! The tree is too old, and has died. :(\n"
 			elsif @height > 2
 				# new oranges grow
-				@orange_count = (@height * 15 - 25).to_i
-				"This year your tree grew to #{@height}m tall," +
-				" and produced #{@orange_count} oranges."
+				@semaphore.synchronize do
+					@orange_count = (@height * 15 - 25).to_i
+					"This year your tree grew to #{@height}m tall," +
+					" and produced #{@orange_count} oranges."
+				end
 			else
 				"This year your tree grew to #{@height}m tall," +
 				" but is still too young to bear fruit."
@@ -47,8 +50,10 @@ class OrangeTree
 	def pick_an_orange
 		if @alive
 			if @orange_count > 0
-				@orange_count = @orange_count - 1
-				'You pick a juicy, delicious orange!'
+				@semaphore.synchronize do
+					@orange_count = @orange_count - 1
+					'You pick a juicy, delicious orange!'
+				end
 			else
 				'You search every branch, but find no oranges.'
 			end

@@ -138,7 +138,7 @@ describe Interfaz do
 end
 
 
-describe Quiz do
+=begin describe Quiz do
   
 	before :all do  
 		@quiz = Quiz.new("Cuestionario de LPP 05/12/2014") {
@@ -163,7 +163,7 @@ describe Quiz do
 	
 	
 end
-
+=end
 
 describe "Reversible" do
 	before :all do
