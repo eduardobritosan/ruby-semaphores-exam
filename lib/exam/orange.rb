@@ -9,7 +9,7 @@ class OrangeTree
 		if @alive
 			@height
 		else
-			'A dead tree is not very tall. :('
+			'A dead tree is not very tall.  :('
 		end
 	end
 
